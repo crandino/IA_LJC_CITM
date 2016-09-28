@@ -3,8 +3,9 @@ using System.Collections;
 
 public class KinematicArrive : MonoBehaviour {
 
-	public float min_distance = 0.1f;
-	public float time_to_target = 0.25f;
+    public float min_distance;
+    public float dist_to_stop;
+    public float time_to_target;
 
 	Move move;
 
@@ -16,7 +17,7 @@ public class KinematicArrive : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Vector3 diff = move.target.transform.position - transform.position;
+        Vector3 diff = move.target.transform.position - transform.position;
 
 		if(diff.magnitude < min_distance)
 			move.SetMovementVelocity(Vector3.zero);
@@ -24,7 +25,7 @@ public class KinematicArrive : MonoBehaviour {
 		diff /= time_to_target;
 
 		move.SetMovementVelocity(diff);
-	}
+    }
 
 	void OnDrawGizmosSelected() 
 	{

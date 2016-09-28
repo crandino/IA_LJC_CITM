@@ -9,7 +9,7 @@ public class Move : MonoBehaviour {
 	public Slider arrow;
 	public float max_mov_velocity = 5.0f;
 	public float max_mov_acceleration = 0.1f;
-	public float max_rot_velocity = 10.0f; // in degrees / second
+    public float max_rot_velocity; // in degrees / second
 	public float max_rot_acceleration = 0.1f; // in degrees
 
 	[Header("-------- Read Only --------")]
@@ -49,7 +49,7 @@ public class Move : MonoBehaviour {
 		}
 
 		// cap rotation
-		Mathf.Clamp(rotation, -max_rot_velocity, max_rot_velocity);
+		rotation = Mathf.Clamp(rotation, -max_rot_velocity, max_rot_velocity);
 
 		// rotate the arrow
 		float angle = Mathf.Atan2(movement.x, movement.z);
