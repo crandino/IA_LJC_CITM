@@ -25,6 +25,7 @@ public class SteeringPursue : MonoBehaviour {
         // TODO 6: Create a fake position to represent
         // enemies predicted movement. Then call Steer()
         // on our Steering Arrive
+
         Vector3 fake_pos = target + (velocity * max_prediction);
         arrive.Steer(fake_pos);
 	}
