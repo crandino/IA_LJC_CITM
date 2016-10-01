@@ -48,8 +48,8 @@ public class Move : MonoBehaviour {
 			movement *= max_mov_velocity;
 		}
 
-		// cap rotation
-		rotation = Mathf.Clamp(rotation, -max_rot_velocity, max_rot_velocity);
+        // cap rotation
+        rotation = Mathf.Clamp(rotation, -max_rot_velocity, max_rot_velocity);
 
 		// rotate the arrow
 		float angle = Mathf.Atan2(movement.x, movement.z);

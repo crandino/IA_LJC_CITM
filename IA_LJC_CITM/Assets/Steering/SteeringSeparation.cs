@@ -32,12 +32,14 @@ public class SteeringSeparation : MonoBehaviour {
             if (colliders[i] == GetComponent<BoxCollider>())
                 continue;
 
-            Vector3 temp = (transform.position - new Vector3(colliders[i].transform.position.x, 0.0f, colliders[i].transform.position.z));
+            Vector3 temp = (transform.position - colliders[i].transform.position);
 
             relative_distance = 1.0f - Vector3.Distance(colliders[i].transform.position, transform.position) / search_radius;
             temp *= falloff.Evaluate(relative_distance);                        
 
-            escape_dir += temp;          
+            escape_dir += Vector3.ProjectOnPlane(temp,Vector3.up);
+
+            if (escape_dir.y != 0.0f) Debug.Log("WARNING!");         
         }
 
         move.AccelerateMovement(escape_dir);
