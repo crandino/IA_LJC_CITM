@@ -24,7 +24,7 @@ public class SteeringVelocityMatching : SteeringAbstract
             // then accelerate to it.
             Vector3 acc = (target_move.movement - move.movement).normalized;
             acc *= move.max_mov_acceleration;
-            move.AccelerateMovement(acc);
+            move.AccelerateMovement(acc, priority);
         }
 	}
 }

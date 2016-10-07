@@ -22,6 +22,6 @@ public class SteeringFlee : SteeringAbstract
         // TODO 2: Same as Steering seek but opposite direction
         Vector3 diff = (transform.position - target).normalized;
         diff *= move.max_mov_acceleration;
-        move.AccelerateMovement(diff);
+        move.AccelerateMovement(diff, priority);
     }
 }

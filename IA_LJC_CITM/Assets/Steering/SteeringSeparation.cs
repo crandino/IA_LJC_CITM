@@ -38,12 +38,10 @@ public class SteeringSeparation : SteeringAbstract
             relative_distance = 1.0f - Vector3.Distance(colliders[i].transform.position, transform.position) / search_radius;
             temp *= falloff.Evaluate(relative_distance);                        
 
-            escape_dir += Vector3.ProjectOnPlane(temp,Vector3.up);
-
-            if (escape_dir.y != 0.0f) Debug.Log("WARNING!");         
+            escape_dir += Vector3.ProjectOnPlane(temp,Vector3.up);      
         }
 
-        move.AccelerateMovement(escape_dir);
+        move.AccelerateMovement(escape_dir, priority);
 	}
 
 	void OnDrawGizmosSelected() 

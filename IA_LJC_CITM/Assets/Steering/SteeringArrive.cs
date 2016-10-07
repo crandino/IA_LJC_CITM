@@ -43,13 +43,13 @@ public class SteeringArrive : SteeringAbstract
 
             if (acc.magnitude > move.max_mov_acceleration)
                 acc = Vector3.ClampMagnitude(acc, move.max_mov_acceleration);
-            move.AccelerateMovement(acc);
+            move.AccelerateMovement(acc, priority);
         }
         else // Perhaps this part might not be here
         {
             Vector3 diff = (target - transform.position).normalized;
             diff *= move.max_mov_acceleration;
-            move.AccelerateMovement(diff);
+            move.AccelerateMovement(diff, priority);
         }
         
 	}

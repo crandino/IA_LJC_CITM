@@ -39,7 +39,7 @@ public class SteeringObstacleAvoidance : SteeringAbstract
             if (Physics.Raycast(ray, out ray_hit, avoid_distance, mask))
             {
                 Vector3 acc = move.movement + Vector3.ProjectOnPlane(ray_hit.normal, Vector3.up);
-                move.AccelerateMovement(acc);
+                move.AccelerateMovement(acc, priority);
             }                
         }
 
