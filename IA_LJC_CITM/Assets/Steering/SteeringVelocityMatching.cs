@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteeringVelocityMatching : MonoBehaviour {
+public class SteeringVelocityMatching : SteeringAbstract
+{
 
 	public float time_to_target = 0.25f;
 

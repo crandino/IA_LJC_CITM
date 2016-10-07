@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteeringArrive : MonoBehaviour {
+public class SteeringArrive : SteeringAbstract
+{
 
 	public float min_distance = 0.1f;
 	public float slow_distance = 5.0f;

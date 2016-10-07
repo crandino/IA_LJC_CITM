@@ -2935,6 +2935,168 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1576826866}
   m_Mesh: {fileID: 4300000, guid: 38b4fea28f58d3641980a70a5188e750, type: 3}
+--- !u!1 &1593856761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1593856764}
+  - 114: {fileID: 1593856763}
+  - 114: {fileID: 1593856762}
+  m_Layer: 0
+  m_Name: BGCurve
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1593856762
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593856761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d20671ad38ded4fa2362df353b9a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHandles: 1
+  parent: {fileID: 0}
+  ccName: 
+  fields: 1
+  sectionParts: 30
+  usePositionToCalculateTangents: 0
+  optimizeStraightLines: 0
+  updateMode: 0
+  rendererForUpdateCheck: {fileID: 0}
+--- !u!114 &1593856763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593856761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70f079e2a6bf364e8185b765fbe61c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    hideHandles: 0
+    newPointDistance: 2
+    showCurve: 1
+    showCurveMode: 1
+    sections: 20
+    showPointMenu: 1
+    showTangents: 0
+    tangentsSize: 0.7
+    tangentsColor: {r: 1, g: 1, b: 1, a: 1}
+    tangentsPerSection: 1
+    controlType: 1
+    vRay: 0
+    lineColor: {r: 1, g: 0, b: 0, a: 1}
+    showPointControlType: 1
+    showPointPosition: 1
+    showHandles: 1
+    handlesType: 0
+    handlesSettings:
+      RemoveX: 0
+      RemoveY: 0
+      RemoveZ: 0
+      RemoveXZ: 0
+      RemoveXY: 0
+      RemoveYZ: 0
+      AxisScale: 1
+      PlanesScale: 1
+      Alpha: 1
+    showLabels: 1
+    labelColor: {r: 0, g: 0, b: 0, a: 1}
+    showPositions: 0
+    labelColorSelected: {r: 0, g: 1, b: 0, a: 1}
+    showSpheres: 1
+    sphereRadius: 0.1
+    sphereColor: {r: 1, g: 0, b: 0, a: 1}
+    showPointControlPositions: 1
+    showControlHandles: 1
+    controlHandlesType: 0
+    controlHandlesSettings:
+      RemoveX: 0
+      RemoveY: 0
+      RemoveZ: 0
+      RemoveXZ: 0
+      RemoveXY: 0
+      RemoveYZ: 0
+      AxisScale: 0.7
+      PlanesScale: 0.7
+      Alpha: 0.7
+    controlHandlesColor: {r: 0, g: 1, b: 1, a: 1}
+    showControlLabels: 1
+    showControlPositions: 0
+    labelControlColor: {r: 0, g: 0, b: 0, a: 1}
+    existing: 1
+  mode2D: 0
+  closed: 1
+  points:
+  - controlType: 1
+    positionLocal: {x: -16.566507, y: 0, z: -8.3777485}
+    controlFirstLocal: {x: 1, y: 0, z: 0}
+    controlSecondLocal: {x: -1, y: -0, z: -0}
+    curve: {fileID: 1593856763}
+  - controlType: 1
+    positionLocal: {x: -26.495358, y: 0, z: -6.047503}
+    controlFirstLocal: {x: 4.0193863, y: 0, z: 1.1239552}
+    controlSecondLocal: {x: -4.0193863, y: -0, z: -1.1239552}
+    curve: {fileID: 1593856763}
+  - controlType: 1
+    positionLocal: {x: -33.960823, y: 0, z: -6.1809964}
+    controlFirstLocal: {x: 2.7270718, y: 0, z: -0.8706908}
+    controlSecondLocal: {x: -2.7270718, y: -0, z: 0.8706908}
+    curve: {fileID: 1593856763}
+  - controlType: 1
+    positionLocal: {x: -37.06571, y: 1.7984688, z: 7.380444}
+    controlFirstLocal: {x: 0.11097188, y: -0.38281628, z: -2.8966098}
+    controlSecondLocal: {x: -0.11097188, y: 0.38281628, z: 2.8966098}
+    curve: {fileID: 1593856763}
+  - controlType: 1
+    positionLocal: {x: -19.352518, y: 0, z: 12.34814}
+    controlFirstLocal: {x: -3.75261, y: 0.45514408, z: -0.46828622}
+    controlSecondLocal: {x: 3.75261, y: -0.45514408, z: 0.46828622}
+    curve: {fileID: 1593856763}
+  - controlType: 1
+    positionLocal: {x: -12.585092, y: 0, z: 3.8506541}
+    controlFirstLocal: {x: -0.7846602, y: -0.10532473, z: 2.1840105}
+    controlSecondLocal: {x: 0.7846602, y: 0.10532473, z: -2.1840105}
+    curve: {fileID: 1593856763}
+  - controlType: 1
+    positionLocal: {x: 6.609174, y: 0, z: 1.1186763}
+    controlFirstLocal: {x: -3.9307451, y: 0.021257225, z: 0.1412262}
+    controlSecondLocal: {x: 3.9307451, y: -0.021257225, z: -0.1412262}
+    curve: {fileID: 1593856763}
+  - controlType: 1
+    positionLocal: {x: 13.592151, y: 0, z: -6.339391}
+    controlFirstLocal: {x: -0.87393564, y: -0.005400147, z: 1.9640143}
+    controlSecondLocal: {x: 0.87393564, y: 0.005400147, z: -1.9640143}
+    curve: {fileID: 1593856763}
+  - controlType: 1
+    positionLocal: {x: -8.974611, y: 0, z: -10.57704}
+    controlFirstLocal: {x: 4.6504555, y: 0.0010169569, z: 0.12956047}
+    controlSecondLocal: {x: -4.6504555, y: -0.0010169569, z: -0.12956047}
+    curve: {fileID: 1593856763}
+--- !u!4 &1593856764
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1593856761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &1621344713
 GameObject:
   m_ObjectHideFlags: 0

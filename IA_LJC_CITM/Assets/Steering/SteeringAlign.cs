@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteeringAlign : MonoBehaviour {
+public class SteeringAlign : SteeringAbstract
+{
 
     public float min_angle;
     public float slow_angle;

@@ -7,7 +7,8 @@ public struct RayCastSpecs
     public Vector3 off_set;
 }
 
-public class SteeringObstacleAvoidance : MonoBehaviour {
+public class SteeringObstacleAvoidance : SteeringAbstract
+{
 
     public RayCastSpecs[] ray_casts;
 	public LayerMask mask;
@@ -30,7 +31,8 @@ public class SteeringObstacleAvoidance : MonoBehaviour {
         // 2- Calculate a quaternion with rotation based on movement vector
         // 3- Cast all rays. If one hit, get away from that surface using the hitpoint and normal info
 
-        RaycastHit ray_hit;
+        RaycastHit ray_hit;        
+
         for (int i = 0; i < ray_casts.Length; ++i)
         {
             Ray ray = new Ray(transform.position + ray_casts[i].off_set, move.movement);
@@ -38,7 +40,6 @@ public class SteeringObstacleAvoidance : MonoBehaviour {
             {
                 Vector3 acc = move.movement + Vector3.ProjectOnPlane(ray_hit.normal, Vector3.up);
                 move.AccelerateMovement(acc);
-                if (acc.y != 0.0f) Debug.Log("WARNING!");
             }                
         }
 

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SteeringSeparation : MonoBehaviour {
+public class SteeringSeparation : SteeringAbstract
+{
 
     [Range(0.0f, 1.0f)]
     public float relative_distance;
