@@ -6,7 +6,8 @@ public class KinematicSeek : MonoBehaviour {
 	Move move;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		move = GetComponent<Move>();
 	}
 	

@@ -34,8 +34,7 @@ public class Move : MonoBehaviour {
                 movement += movement_priorities[i];
                 break;
             }                
-        }
-            
+        }            
 
         // cap velocity
         if (movement.magnitude > max_mov_velocity)
