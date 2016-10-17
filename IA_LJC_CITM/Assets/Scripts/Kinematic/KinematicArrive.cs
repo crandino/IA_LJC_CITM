@@ -4,13 +4,14 @@ using System.Collections;
 public class KinematicArrive : MonoBehaviour {
 
     public float min_distance;
-    public float dist_to_stop;
+    //public float dist_to_stop;
     public float time_to_target;
 
 	Move move;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		move = GetComponent<Move>();
 	}
 

@@ -6,7 +6,8 @@ public class KinematicFlee : MonoBehaviour {
 	Move move;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		move = GetComponent<Move>();
 	}
 	
@@ -16,7 +17,6 @@ public class KinematicFlee : MonoBehaviour {
 		Vector3 diff = move.transform.position - move.target.transform.position;
 		diff.Normalize ();
 		diff *= move.max_mov_velocity;
-
 		move.SetMovementVelocity(diff);
 	}
 }

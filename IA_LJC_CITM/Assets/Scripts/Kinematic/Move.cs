@@ -25,16 +25,15 @@ public class Move : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        // Selecting movment
-
-        for (uint i = 0; i < SteeringConf.num_priorities; ++i)
-        {
-            if (movement_priorities[i].magnitude > 0.0f)
-            {
-                movement += movement_priorities[i];
-                break;
-            }                
-        }            
+        //Selecting movement
+        //for (uint i = 0; i < SteeringConf.num_priorities; ++i)
+        //{
+        //    if (movement_priorities[i].magnitude > 0.0f)
+        //    {
+        //        movement += movement_priorities[i];
+        //        break;
+        //    }
+        //}
 
         // cap velocity
         if (movement.magnitude > max_mov_velocity)
@@ -59,20 +58,19 @@ public class Move : MonoBehaviour {
         // finally move
         transform.position += movement * Time.deltaTime;
 
+        // Resetting movement_priorities
         for(uint i = 0; i < SteeringConf.num_priorities; ++i)
             movement_priorities[i] = Vector3.zero;
-
     }
 
     // Methods for behaviours to set / add velocities
     public void SetMovementVelocity (Vector3 velocity) 
 	{
-		movement = velocity;
+        movement = velocity;
 	}
 
 	public void AccelerateMovement (Vector3 velocity, int priority) 
 	{
-        //movement += velocity;
         movement_priorities[priority] += velocity;
 	}
 

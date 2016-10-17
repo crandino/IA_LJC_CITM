@@ -3,12 +3,13 @@ using System.Collections;
 
 public class KinematicWander : MonoBehaviour {
 
-	public float max_angle = 0.5f;
+    public float max_angle;
 
 	Move move;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		move = GetComponent<Move>();
 	}
 

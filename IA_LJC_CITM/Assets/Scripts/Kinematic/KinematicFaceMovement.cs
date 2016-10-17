@@ -3,12 +3,13 @@ using System.Collections;
 
 public class KinematicFaceMovement : MonoBehaviour {
 
-	public float min_angle = 1.0f;
+	public float min_angle;
 
 	Move move;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		move = GetComponent<Move>();
 	}
 	

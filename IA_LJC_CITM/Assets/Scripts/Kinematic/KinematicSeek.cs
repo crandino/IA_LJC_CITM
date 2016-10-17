@@ -15,9 +15,8 @@ public class KinematicSeek : MonoBehaviour {
 	void Update () 
 	{
 		Vector3 diff = move.target.transform.position - transform.position;
-		diff.Normalize ();
-		diff *= move.max_mov_velocity;
-
+        diff.Normalize();
+        diff *= move.max_mov_velocity;
 		move.SetMovementVelocity(diff);
 	}
 }
